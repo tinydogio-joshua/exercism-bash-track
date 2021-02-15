@@ -7,4 +7,6 @@ WORKDIR /src
 #
 # RUN apk add --no-cache <your-package-list-here>
 
+RUN sudo apt-get update -y && sudo apt-get install -y bats
+
 RUN bash -c "$(curl -s https://raw.githubusercontent.com/tinydog-llc/exercism-cli-setup/main/install.sh)"
